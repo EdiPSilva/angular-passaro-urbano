@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { RestauranteComponent } from './restaurante/restaurante.component';
 import { DiversaoComponent } from './diversao/diversao.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routers';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { DiversaoComponent } from './diversao/diversao.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
