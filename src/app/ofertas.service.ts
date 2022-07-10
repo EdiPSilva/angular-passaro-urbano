@@ -13,4 +13,8 @@ export class OfertasService {
     public getOfertas(): Promise<Array<Oferta>> {
         return this.http.get(this.endpoint+"?destaque=true").toPromise().then((resposta: any) => resposta);
     }
+
+    public getOfertasPorCategoria(categoria: string): Promise<Array<Oferta>> {
+        return this.http.get(this.endpoint+`?categoria=${categoria}`).toPromise().then((resposta: any) => resposta);
+    }
 }
