@@ -10,6 +10,7 @@ import { RestauranteComponent } from './restaurante/restaurante.component';
 import { DiversaoComponent } from './diversao/diversao.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routers';
+import { OfertaComponent } from './oferta/oferta.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ROUTES } from './app.routers';
     RodapeComponent,
     RestauranteComponent,
     DiversaoComponent,
+    OfertaComponent,
   ],
   imports: [
     BrowserModule,
