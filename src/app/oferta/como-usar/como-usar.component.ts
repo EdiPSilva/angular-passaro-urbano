@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from 'src/app/ofertas.service';
-import { ComoUsar } from 'src/app/shared/como-usar.model';
+import { InfoOferta } from 'src/app/shared/como-usar.model';
 
 @Component({
   selector: 'app-como-usar',
@@ -19,8 +19,8 @@ export class ComoUsarComponent implements OnInit {
     let id = this.route.parent?.snapshot.params['id'];
 
     this.ofertasService.getComoUsarOfertaPorId(id)
-      .then((comoUsar: ComoUsar) => {
-        this.comoUsar = comoUsar.descricao;
+      .then((infoOferta: InfoOferta) => {
+        this.comoUsar = infoOferta.descricao;
       })
       .catch((params: any) => {
         console.log(params);
